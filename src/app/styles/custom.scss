@@ -1,0 +1,47 @@
+// Importar Bootstrap primero
+@import "~bootstrap/scss/bootstrap";
+
+// Personalizaciones
+$primary-color: #2c8a4a;
+$secondary-color: #3aa76d;
+
+// Sobreescribir variables de Bootstrap
+$primary: $primary-color;
+$secondary: $secondary-color;
+
+// Estilos personalizados
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $primary;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-color: darken($primary, 5%);
+
+    &:hover {
+        background-color: darken($primary, 10%);
+        border-color: darken($primary, 15%);
+    }
+}
+
+// Importar Bootstrap de nuevo para aplicar las personalizaciones
+@import "~bootstrap/scss/bootstrap";
